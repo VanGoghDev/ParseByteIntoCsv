@@ -1,5 +1,6 @@
 package ru.firsov.kirill.javacore;
 import java.io.*;
+import java.nio.ByteBuffer;
 
 public class BufferedInputFile {
     public static void main(String[] args) {
@@ -8,6 +9,7 @@ public class BufferedInputFile {
             FileReader fr = new FileReader(file);
             BufferedReader reader = new BufferedReader(fr);
             String line = reader.readLine();
+            //ByteBuffer bb = ByteBuffer.wrap(line);
             while (line != null) {
                 System.out.println(line);
                 line = reader.readLine();
